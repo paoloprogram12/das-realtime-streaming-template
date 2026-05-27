@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS predictions (
     pay_date DATE,
     record_date DATE,
     prediction NUMERIC(12, 4),
+    is_anomaly BOOLEAN DEFAULT FALSE,
+    z_score NUMERIC(12, 4),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
